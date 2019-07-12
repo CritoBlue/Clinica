@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Clínica Dos Álamos{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<section id="banner" style="padding: 4em 0">
+	<div class="content">
+		<h2>Bienvenido a Centro Médico Dos Álamos</h2>
+		<p style="color: lightgray">Comprometidos con tu bienestar, porque eres parte de nuestra familia</p>
+		<a href="#main" class="button scrolly" style="color: lightgray; border-color: #b1ddab">Conócenos Más Abajo</a>
+	</div>
+</section>
+<section id="main">
+	<div class="container">
+		<div class="row gtr-200">
+			<div class="col-12">
+				<section class="box highlight">
+					<!-- <ul class="special">
+						<li><a href="#" class="icon solid fa-search"><span class="label">Magnifier</span></a></li>
+						<li><a href="#" class="icon solid fa-tablet-alt"><span class="label">Tablet</span></a></li>
+						<li><a href="#" class="icon solid fa-flask"><span class="label">Flask</span></a></li>
+						<li><a href="#" class="icon solid fa-cog"><span class="label">Cog?</span></a></li>
+					</ul> -->
+					<header>
+						<h2>Un Centro Médico Familiar</h2>
+						<p>Preocupados por darte el mejor servicio</p>
+					</header>
+					<p>
+						El Centro Médico “Dos Álamos” comenzó como una empresa familiar principalmente dedicada a facilitar espacios totalmente implementados en su edificio a médicos generales y de especialidad. Con el tiempo se han incorporado otros servicios como kinesiología, oftalmología y otorrinolaringología todo con tal de seguir dando un mayor y mejor servicio a nuestros pacientes, nuestra familia.
+					</p>
+				</section>
+			</div>
+			<div class="col-12">
+				<section class="box features">
+					<h2 class="major"><span>Especialidades</span></h2>
+					<div>
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+								<section class="box feature">
+									<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
+									<h3>Kinesiología</h3>
+									<p>
+										Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
+										lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+									</p>
+								</section>
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+								<section class="box feature">
+									<a href="#" class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+									<h3>Oftalmología</h3>
+									<p>
+										Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
+										lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+									</p>
+								</section>
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+								<section class="box feature">
+									<a href="#" class="image featured"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+									<h3>Otorrinolaringología</h3>
+									<p>
+										Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
+										lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+									</p>
+								</section>
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+								<section class="box feature">
+									<a href="#" class="image featured"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
+									<h3>Y más aún...</h3>
+									<p>
+										
+									</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><a href="#" class="button large">Atiéndase con nosotros</a></li>
+									<li><a href="#" class="button alt large">Sea parte de la Familia</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

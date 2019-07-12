@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Pacientes en Espera{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="row"  style="background-color: #fff;">
+	<div class="col-12" style="overflow-x:auto;">
+		<main style="width: 900px; margin: 25px auto; padding-bottom: 25px">
+			<h2 class="major"><span>Pacientes en espera de {{user.first_name}} {{user.last_name}}</span></h2>
+			<table style="width: 100%;">
+				<tr>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Paciente
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Hora
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Especialidad
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Reportar Hora Terminada
+					</th>
+				</tr>
+				{% for item in espera %}
+				<tr> 
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.paciente }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.horaAtencion }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.especialidad }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						<a style="color: white; text-decoration: none; display: inline-block;" href="{% url 'finish_hora' pk=item.id %}">
+							<input type="button" value="Terminar">
+						<a>
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</main>
+	</div>
+</div>
+{% endblock %}

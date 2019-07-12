@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Pedir Hora{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="row"  style="background-color: #fff;">
+	<div class="col-12">
+		<main style="width: 900px; margin: 0px auto;">
+			<h2 class="major" style="margin-bottom: 25px"><span>Pedir Hora Médica</span></h2>
+			<form style="width: 85%; margin: 0px auto;" method="POST">
+			    {% csrf_token %}
+			    <table style="width: 100%;">
+			    	<tr>
+			    		<td colspan="4" style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+			    			{{ errors }}
+			    		</td>
+			    	</tr>
+			    	<tr>
+			    		<td style="padding: 1em 0; vertical-align: middle; text-align: center; font-weight: bold;">
+			        		Fecha de Atención
+			        	</td>
+			    		<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+			        		{{ form.fechaAtencion }}
+			        	</td>
+			    		<td style="padding: 1em 0; vertical-align: middle; text-align: center; font-weight: bold;">
+			    			Hora de Atención
+			    		</td>
+			    		<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+			    			{{ form.horaAtencion }}
+			    		</td>
+			    	</tr>
+			    	<tr>
+			    		<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+			    			Especialidad
+			    		</td>
+			    		<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+				    		{{ form.especialidad }}
+				    	</td>
+				    	<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+				    		Médico
+				    	</td>
+				    	<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+				    		{{ form.medico }}
+				    	</td>
+			    	</tr>
+			    	<tr>
+				    	<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+				    		Sucursal
+				    	</td>
+				    	<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+				    		{{ form.sucursal }}
+				    	</td>
+				    	<td>
+				    		
+				    	</td>
+			    		<td style="padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+			    			<input type="submit" value="Pedir Hora" />
+			    		</td>
+			    	</tr>
+			    </table>
+			</form>
+		</main>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Recaudaciones{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="row"  style="background-color: #fff;">
+	<div class="col-12" style="overflow-x:auto;">
+		<main style="width: 700px; margin: 25px auto; padding-bottom: 25px">
+			<h2 class="major"><span>Recaudaciones de {{sucursal}}</span></h2>
+			<table style="width: 100%;">
+				<tr>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Año
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Mes
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Fecha de Emisión
+					</th>
+					<th style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center; font-weight: bold;">
+						Total Recaudado
+					</th>
+				</tr>
+				{% for item in recauda %}
+				<tr> 
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.año }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.mes }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						{{ item.fechaEmision }}
+					</td>
+					<td style="border-bottom: 5px solid #e7eae8; padding: 1em; vertical-align: middle; text-align: center;">
+						&dollar; {{ item.totalRecaudado }}
+					</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</main>
+	</div>
+</div>
+{% endblock %}
